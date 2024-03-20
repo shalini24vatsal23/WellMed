@@ -4,8 +4,8 @@ import '../style.css';
 
 function Card2({ index ,article }) {
   return (
-    <Card style={{ width: '18rem' }} className='mx-2'>
-      <Card.Img variant="top" src={article.image} />
+    <Card style={{width: '18rem', borderRadius: '0', border: 'none' }} className='mx-2'>
+      <Card.Img className='shadow' variant="top" src={article.image} style={{ borderRadius: '0' }} />
       <Card.Body>
         <Card.Title className=' h6'>{article.title}</Card.Title>
         <button className='pink-btn'>Read article</button>
