@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import '../style.css';
-import '../jsonData/Card1-images.js';
+import '../jsonData/specialities.js';
 
 
 

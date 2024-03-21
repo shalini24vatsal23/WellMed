@@ -1,15 +1,15 @@
 export const disease = [
   {
     "image": "https://www.practostatic.com/consult/consult-home/symptoms_icon/coughing.png",
-    "title": "flu"
+    "title": "Flu"
   },
   {
     "image": "https://www.practostatic.com/consult/consult-home/symptoms_icon/Acne.png",
-    "title": "skin issues"
+    "title": "Dermatology"
   },
   {
     "image": "https://www.practo.com/consult/static/images/top-speciality-pediatric.svg",
-    "title": "child care"
+    "title": "Child care"
   },
   {
     "image": "https://www.practostatic.com/acred/search-assets/2/12-mental-wellness.png",
@@ -17,24 +17,24 @@ export const disease = [
   },
   {
     "image": "https://www.practo.com/consult/static/images/top-speciality-kidney.svg",
-    "title": "kidney issues"
+    "title": "Kidney issues"
   },
   {
     "image": "https://www.practo.com/consult/static/images/top-speciality-gp.svg",
-    "title": "general"
+    "title": "General health"
   },
   {
     "image": "https://www.practostatic.com/consult/consult-home/symptoms_icon/irregular-painful+period.png",
-    "title": "menstrual health"
+    "title": "Menstrual health"
   },
   {
     "image": "https://www.practo.com/consult/static/images/top-speciality-stomach.svg",
-    "title": "stomach issues"
+    "title": "Stomach issues"
   },{
     "image": "https://www.practo.com/consult/static/images/top-speciality-psychiatric.svg",
-    "title": "psychiatric"
+    "title": "Psychiatry"
   },{
     "image": "https://www.practo.com/consult/static/images/top-speciality-gynaecologist.svg",
-    "title": "gynac"
+    "title": "Gynaecology"
   }
 ]

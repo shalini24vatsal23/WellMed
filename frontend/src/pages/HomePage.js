@@ -15,8 +15,10 @@ function HomePage() { // Change the function name to HomePage
 
 
 <section className="carousel-padding"> 
+<hr className='hori-line m-5'/>
+
 <div className='d-flex justify-content-center align-items-center'>
-  <p className='h4'>Specialists</p>
+  <p className='h4'>Specialities</p>
 </div>
 <div class="d-flex justify-content-end"> {/* Add d-flex and justify-content-end */}
   <button type='button' className='btn btn-primary btn_small pos-abs' 
@@ -39,7 +41,7 @@ function HomePage() { // Change the function name to HomePage
 
       <section className='justify-content-center align-items-center'>
         <div className='d-flex justify-content-center'>
-          <p className='h4'>Read Articles from Health Experts</p>
+          <p className='h4'>Read Articles from health experts</p>
         </div>
         
         <div className='d-flex justify-content-center align-items-center'>

@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../style.css';
+
 function NavBar()
 {
   return(
@@ -25,7 +26,7 @@ function NavBar()
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
-          <Nav.Link href="#Specialists">Specialists</Nav.Link>
+          <Nav.Link href="#Specialists">Specialities</Nav.Link>
             <Nav.Link href="#About">About</Nav.Link>
             <Nav.Link href="#Contact us">Contact us</Nav.Link>
             <Nav.Link href='#FAQ'>FAQ's</Nav.Link>
