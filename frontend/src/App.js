@@ -3,9 +3,10 @@ import React from 'react';
 import './App.css';
 import HomePage from './pages/HomePage';
 import Article from './pages/Article';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import SignIn1 from './pages/SignIn1';
+import SignUpDoctor from './pages/SignUpDoctor';
+import SignUpPatient from './pages/SignUpPatient';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,22 +19,19 @@ function App() {
       element: <Article />,
     },
     {
-      path: '/SignIn1', 
-      element: <SignIn1 />,
+      path: '/signup-patient',
+      element: <SignUpPatient />,
+    },
+    {
+      path: '/signup-doctor',
+      element: <SignUpDoctor />,
     },
   ]);
-  
-  
-    return (
-      <RouterProvider router={router}>
-        <nav>
-          {/* Add other navigation links here */}
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/article/1">Article 1</NavLink> 
-          <NavLink to="/SignIn1">Sign In</NavLink>  
-        </nav>
-      </RouterProvider>
-    );
-  }
+
+  return (
+    <RouterProvider router={router}>       
+    </RouterProvider>
+  );
+}
 
 export default App;

@@ -56,7 +56,7 @@ function NavBar()
       </Form>
       
       <button className='btn border border-1 border-black btn-sm my-1 ms-auto'>
-      <Link to='/SignIn1' className='text-decoration-none text-dark' >
+      <Link to='/signup-doctor' className='text-decoration-none text-dark' >
         Login / Signup
         </Link>
         </button>  

@@ -20,15 +20,6 @@ function HomePage() { // Change the function name to HomePage
 <div className='d-flex justify-content-center align-items-center'>
   <p className='h4'>Specialities</p>
 </div>
-<div class="d-flex justify-content-end"> {/* Add d-flex and justify-content-end */}
-  <button type='button' className='btn btn-primary btn_small pos-abs' 
-  style={{ right: 60, 
-  background: 'transparent',
-  border: '1px solid #fe5757',
-  color: '#fe5757' }}>
-  View all
-  </button>
-</div>
 
   <div className="d-flex justify-content-center align-items-center">
     <div className="w-75 p-3">
