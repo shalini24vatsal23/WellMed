@@ -1,10 +1,23 @@
 import React from 'react';
 import '../style.css';
+import NavBar from '../components/NavBar';
 
 function SignUpPatient() {
   return (
-    <div className="auth-container d-flex justify-content-center align-items-center vh-100 m-3">
-      <div className="Auth-form shadow border border-1 border-lightgrey rounded p-5">
+    <div className="auth-container d-flex justify-content-center align-items-center vh-100 m-3"
+    style={{
+      backgroundImage: `url(https://cdni.iconscout.com/illustration/premium/thumb/doctor-consults-patient-4739750-3972766.png)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    }}>
+      <NavBar/>
+      <div className="Auth-form shadow border border-1 border-lightgrey rounded p-5" style={{ backgroundColor: 'white' }}>
         <div className="Auth-form-content">
           <h3>Sign Up As Patient</h3>
           

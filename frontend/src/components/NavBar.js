@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../style.css';
 import  logo  from '../images/logo.png';
 import { Link } from 'react-router-dom';
+import TwoButton from '../pages/TwoButton';
 
 function NavBar()
 {
@@ -56,7 +56,7 @@ function NavBar()
       </Form>
       
       <button className='btn border border-1 border-black btn-sm my-1 ms-auto'>
-      <Link to='/signup-doctor' className='text-decoration-none text-dark' >
+      <Link to='/TwoButton' className='text-decoration-none text-dark' >
         Login / Signup
         </Link>
         </button>  

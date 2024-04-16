@@ -1,11 +1,25 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import '../style.css';
+import backgroundImage from '../images/signin.png';
+import NavBar from '../components/NavBar';
 
 function SignUpDoctor() {
   return (
-    <div className="auth-container d-flex justify-content-center align-items-center vh-100 m-3">
-      <div className="Auth-form shadow border border-1 border-lightgrey rounded p-5">
+    <div className="auth-container d-flex justify-content-center align-items-center vh-100 m-3"
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    }}>
+      <NavBar/>
+      <div className="Auth-form shadow border border-1 border-lightgrey rounded p-5" style={{ backgroundColor: 'white' }}>
         <div className="Auth-form-content">
           <h3>Sign Up As Doctor</h3>
 
@@ -101,7 +115,7 @@ function SignUpDoctor() {
             <a href="#">Forgot password?</a>
           </p>
           <p>
-            Don't have an account? <a href="#">Sign Up</a>
+            already have an account? <a href="#">Sign In</a>
           </p>
 
           </form>

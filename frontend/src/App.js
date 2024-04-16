@@ -4,9 +4,11 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import Article from './pages/Article';
 import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
-import SignIn1 from './pages/SignIn1';
 import SignUpDoctor from './pages/SignUpDoctor';
 import SignUpPatient from './pages/SignUpPatient';
+import TwoButton from './pages/TwoButton';
+import LoginPage from './pages/LoginPage';
+import LoginPage1 from './pages/LoginPage1';
 
 function App() {
   const router = createBrowserRouter([
@@ -19,12 +21,24 @@ function App() {
       element: <Article />,
     },
     {
-      path: '/signup-patient',
-      element: <SignUpPatient />,
+      path: '/TwoButton',
+      element: <TwoButton />,
     },
     {
-      path: '/signup-doctor',
+      path: '/LoginPage',
+      element: <LoginPage />,
+    },
+    {
+      path: '/SignUpDoctor',
       element: <SignUpDoctor />,
+    },
+    {
+      path: '/LoginPage1',
+      element: <LoginPage1 />,
+    },
+    {
+      path: '/SignUpPatient',
+      element: <SignUpPatient />,
     },
   ]);
 
