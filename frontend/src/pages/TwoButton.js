@@ -1,32 +1,39 @@
 import React from 'react';
-import '../style.css'
-import NavBar from '../components/NavBar';
-import { Link } from 'react-router-dom';
-import SignIn1 from './LoginPage1';
+import { Link } from 'react-router-dom'; // Import Link
+import Card from 'react-bootstrap/Card';
+import '../style.css';
 
 function TwoButton() {
-  const handleClickButton1 = () => {
-    console.log('Button 1 clicked!');
-  };
-
-  const handleClickButton2 = () => {
-    console.log('Button 2 clicked!');
-  };
-
   return (
-    <div>
-      <NavBar/>
-      <div className="container">
-      <button className="center-button" onClick={handleClickButton1}>
-        <Link to='/LoginPage' className='text-decoration-none text-dark' >
-        For Doctors
-        </Link>
-      </button>
-      <span></span>
-      <button className="center-button" onClick={handleClickButton2}>
-        <Link to='/LoginPage1'>For Patients</Link>
-      </button>
-    </div>
+    <div className="container">
+      <div className="row justify-content-center align-items-center">
+        <div className="col-md-6 col-md-offset-3"> {/* Centering the columns */}
+          <Card style={{ width: '18rem' }} className="h-100 shadow">
+            <Card.Body>
+              <Card.Title>For Patients</Card.Title>
+              <Card.Text>
+                Start your online consultation now!
+              </Card.Text>
+              <button className='pink-btn'>
+                <Link to='/LoginPage1' className='text-decoration-none text-light'>Start Now</Link> {/* Use Link component */}
+              </button>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="col-md-6 col-md-offset-3"> {/* Centering the columns */}
+          <Card style={{ width: '18rem' }} className="h-100 shadow">
+            <Card.Body>
+              <Card.Title>For Doctors</Card.Title>
+              <Card.Text>
+                Manage Patient's details.
+              </Card.Text>
+              <button className='btn btn-primary'>
+                <Link to='/LoginPage' className='text-decoration-none text-light'>Start Now</Link> {/* Use Link component */}
+              </button>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
