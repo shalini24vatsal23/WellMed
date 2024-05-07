@@ -3,6 +3,7 @@ import Card1 from './Card1';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { disease } from '../jsonData/specialities';
+import { Link } from 'react-router-dom';
 
 const responsive = {
   superLargeDesktop: {
@@ -34,8 +35,10 @@ function MultiCarousel1() {
       itemClass="carousel-item-padding-20-px"
     >
       {disease.map((item, index) => (
-        <Card1 key={index} disease={item} />
-      ))}
+  <Link key={index} to="/SpecialitiesPage">
+    <Card1 key={index} disease={item} />
+  </Link>
+))}
     </Carousel>
   );
 }

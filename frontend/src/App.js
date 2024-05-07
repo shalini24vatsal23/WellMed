@@ -9,6 +9,7 @@ import SignUpPatient from './pages/SignUpPatient';
 import TwoButton from './pages/TwoButton';
 import LoginPage from './pages/LoginPage';
 import LoginPage1 from './pages/LoginPage1';
+import SpecialitiesPage from './pages/SpecialitiesPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ function App() {
       path: '/SignUpPatient',
       element: <SignUpPatient />,
     },
+   {
+    path: '/SpecialitiesPage',
+    element: <SpecialitiesPage />,
+   }
   ]);
 
   return (

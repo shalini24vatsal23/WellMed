@@ -6,8 +6,7 @@ import ReviewCarousel from '../components/ReviewCarousel';
 import MultiCarousel1 from '../components/MultiCarousel1';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar'
-function HomePage() { // Change the function name to HomePage
-
+function HomePage() {
   return (
     <>
     

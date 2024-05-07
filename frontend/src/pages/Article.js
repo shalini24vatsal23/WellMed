@@ -15,8 +15,6 @@ function Article() {
       <section>
         <NavBar />
       </section>
-      
-      {/* Adjusted section to add a top margin. Adjust the value based on your NavBar's height */}
       <section style={{ marginTop: '60px' }}>
         <div className='d-flex flex-column justify-content-center align-items-center'>
           <div className='w-50'>
