@@ -1,8 +1,9 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import SpecialCard from "../components/SpecialCard";
-import '../style.css'; // Import your stylesheet
-
+import '../style.css';
+import { Link } from 'react-router-dom';
+import Footer from "../components/Footer";
 const DocData = [
   {
     name: "Dr Morrigan",
@@ -18,11 +19,12 @@ const DocData = [
 function SpecialitiesPage() {
   return (
     <>
+    
       <section className="specialities-page">
         <NavBar />
         <div className="specialities-grid" style={{ paddingTop: "90px", paddingBottom: "20px", display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
           {DocData.map((doctor, index) => (
-            <SpecialCard key={index} doctor={doctor} />
+           <Link to='/Appoint'><SpecialCard key={index} doctor={doctor} /></Link>
           ))}
         </div>
         <div className="specialities-grid" style={{ paddingTop: "20px", paddingBottom: "20px", display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
@@ -35,6 +37,9 @@ function SpecialitiesPage() {
             <SpecialCard key={index} doctor={doctor} />
           ))}
         </div>
+      </section>
+      <section className='footer py-0'>
+            <Footer/>
       </section>
     </>
   );

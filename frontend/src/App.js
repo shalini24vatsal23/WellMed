@@ -10,6 +10,7 @@ import TwoButton from './pages/TwoButton';
 import LoginPage from './pages/LoginPage';
 import LoginPage1 from './pages/LoginPage1';
 import SpecialitiesPage from './pages/SpecialitiesPage';
+import Appoint from './pages/Appoint';
 
 function App() {
   const router = createBrowserRouter([
@@ -44,7 +45,13 @@ function App() {
    {
     path: '/SpecialitiesPage',
     element: <SpecialitiesPage />,
+   },
+   {
+    path: '/Appoint',
+    element: <Appoint/>,
+
    }
+   
   ]);
 
   return (
