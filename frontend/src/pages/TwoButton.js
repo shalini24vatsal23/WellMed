@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import Card from 'react-bootstrap/Card';
 import '../style.css';
+import NavBar from '../components/NavBar';
 
 function TwoButton() {
   return (
     <div className="container">
+      <NavBar/>
       <div className="row justify-content-center align-items-center">
         <div className="col-md-6 col-md-offset-3"> {/* Centering the columns */}
           <Card style={{ width: '18rem' }} className="h-100 shadow">
