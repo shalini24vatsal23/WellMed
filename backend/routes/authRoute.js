@@ -2,7 +2,7 @@ const router = require("express").Router();
 const CryptoJS = require("crypto-js");
 const dotenv = require("dotenv");
 const Patient = require('../models/patient');
-const Doctor = require('../models/doctor'); // Assuming you have a Doctor model
+const Doctor = require('../models/doctor'); 
 dotenv.config();
 
 // Patient SignUp
@@ -56,7 +56,9 @@ router.post('/doctor/signup', async (req, res) => {
         password: CryptoJS.AES.encrypt(req.body.password, process.env.PASS_ENC_KEY).toString(),
         education: req.body.education,
         specialization: req.body.specialization,
-        state: req.body.state
+        experience: req.body.experience,
+        state: req.body.state,
+        price: req.body.price
     });
 
     try {

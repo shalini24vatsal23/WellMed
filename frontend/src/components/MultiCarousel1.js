@@ -35,9 +35,9 @@ function MultiCarousel1() {
       itemClass="carousel-item-padding-20-px"
     >
       {disease.map((item, index) => (
-  <Link key={index} to="/SpecialitiesPage">
-    <Card1 key={index} disease={item} />
-  </Link>
+        <Link key={index} to={`/SpecialitiesPage?specialization=${encodeURIComponent(item.title)}`}>
+        <Card1 key={index} disease={item} />
+       </Link>
 ))}
     </Carousel>
   );

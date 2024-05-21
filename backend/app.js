@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const authRoute = require('./routes/authRoute');
-
+const specialityRoute = require('./routes/specialityRoute')
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -22,7 +22,7 @@ app.use(express.json());
 
 // API routes
 app.use("/api", authRoute);
-
+app.use("/api",specialityRoute);
 
 
 const PORT = process.env.PORT || 5000;

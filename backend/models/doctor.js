@@ -8,7 +8,9 @@ const doctorSchema = new mongoose.Schema(
         password: {type: String,required : true},
         education: {type: String,required : true},
         specialization : {type: String,required : true},
+        experience: {type: Number, required: true},
         state : {type: String,required : true},
+        price: {type: Number, required:true}
     },
     { timestamps : true }
 );
