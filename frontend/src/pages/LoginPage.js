@@ -4,38 +4,40 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import './DocProfile';
 const LoginPage = () => {
-
-  const [email, setemail] = useState('');
-  const [password, setpassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
+  const [successMessage, setSuccessMessage] = useState(''); // Added state for success message
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-    e.preventDefault()
-    if(!email || !password){
-        alert("Enter all required fields.")
-    }
+    e.preventDefault();
+    setSuccessMessage(''); // Clear any previous success message
 
-    try{
-        const res = await axios.post("http://localhost:5000/api/doctor/login",{email, password});
-        navigate('/');
+    if (!email || !password) {
+      alert("Enter all required fields.");
+    } else {
+      try {
+        const res = await axios.post("http://localhost:5000/api/doctor/login", { email, password });
+        setSuccessMessage('Login successful!'); // Set success message
+        setTimeout(() => {
+          navigate('/DocProfile');
+        }, 2000);
+      } catch {
+        setError("Invalid username or password.");
+      }
     }
-    catch{
-       setError("Invalid username or password.");
-    }
-  }
+  };
 
   const handleEmail = (e) => {
-      setemail(e.target.value);
-  }
+    setEmail(e.target.value);
+  };
 
   const handlePassword = (e) => {
-      setpassword(e.target.value);
-  }
-
+    setPassword(e.target.value);
+  };
 
   const backgroundImageStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -70,7 +72,7 @@ const LoginPage = () => {
 
   return (
     <div className="container" style={backgroundImageStyle}>
-      <NavBar/>
+      <NavBar />
       <div style={backgroundOverlayStyle}></div>
       <div className="auth-container">
         <form className="Auth-form">
@@ -78,39 +80,21 @@ const LoginPage = () => {
             <h3>Sign In As Doctor</h3>
             <div className="form-group mt-3">
               <label>Email address</label>
-              <input
-                type="email"
-                className="form-control mt-1"
-                placeholder="Enter email"
-                onChange={handleEmail}
-              />
+              <input type="email" className="form-control mt-1" placeholder="Enter email" onChange={handleEmail} />
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
-              <input
-                type="password"
-                className="form-control mt-1"
-                placeholder="Enter password"
-                onChange={handlePassword}
-              />
+              <input type="password" className="form-control mt-1" placeholder="Enter password" onChange={handlePassword} />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: 'blue',
-                  color: '#ffffff',
-                  border: '1px solid #ffffff',
-                  borderRadius: '6px',
-                }}
-                onClick={handleLogin}
-              >
+              <button type="submit" style={{ backgroundColor: 'blue', color: '#ffffff', border: '1px solid #ffffff', borderRadius: '6px' }} onClick={handleLogin}>
                 Submit
               </button>
               <p className="text-danger">{error}</p>
+              <p className="text-success">{successMessage}</p> {/* Display success message */}
             </div>
             <p className="forgot-password text-right mt-2">
-              <a href="#">Forgot password?</a>
+            <Link to="/DocProfile">Forgot password?</Link>
             </p>
             <p>
               Don't have an account? <Link to="/signupdoctor">Sign Up</Link>
