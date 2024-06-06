@@ -2,7 +2,7 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-
 import React from "react";
 import '../style.css';
 
-function SpecialCard({ doctor }) {
+function SpecialCard({ doctor, startCall }) {
   const doctorName = doctor.firstname + ' ' + doctor.lastname;
   return (
     <MDBCard style={{ borderRadius: '15px', width: '100%'}}>
@@ -42,7 +42,7 @@ function SpecialCard({ doctor }) {
           </div>
         </div>
         <hr />
-        <button className='pink-btn'>Book Now</button>
+        <button className='pink-btn' onClick={startCall}>Book Now</button>
       </MDBCardBody>
     </MDBCard>
   );
